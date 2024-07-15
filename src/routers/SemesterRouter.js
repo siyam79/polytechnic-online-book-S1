@@ -14,4 +14,4 @@ semestersRouter.post("/semesters", createSemester);
 semestersRouter.put("/semesters/u/:id", updateSemesterById);
 semestersRouter.delete("/semesters/d/:id", deleteSemesterById);
 
-module.exports = router;
+module.exports = semestersRouter;

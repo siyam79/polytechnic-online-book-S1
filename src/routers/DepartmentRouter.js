@@ -14,4 +14,4 @@ departmentRouter.post("/departments", createDepartment);
 departmentRouter.put("/departments/:id", updateDepartmentById);
 departmentRouter.delete("/departments/:id", deleteDepartmentById);
 
-module.exports = router;
+module.exports = departmentRouter;

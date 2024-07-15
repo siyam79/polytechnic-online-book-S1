@@ -16,4 +16,4 @@ bookRouter.post("/books", createBook);
 bookRouter.put("/books/u/:id", updateBookById);
 bookRouter.delete("/books/d/:id", deleteBookById);
 
-module.exports = router;
+module.exports = bookRouter;

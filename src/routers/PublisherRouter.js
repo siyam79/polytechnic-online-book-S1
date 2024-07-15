@@ -14,4 +14,4 @@ publisherRouter.post("/publishers", createPublisher);
 publisherRouter.put("/publishers/:id", updatePublisherById);
 publisherRouter.delete("/publishers/:id", deletePublisherById);
 
-module.exports = router;
+module.exports = publisherRouter;
