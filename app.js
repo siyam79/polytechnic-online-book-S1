@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const createError = require("http-errors");
 const morgan = require("morgan");
+const router = require("./src/routers/apis");
 
 // CORS Options
 const corsOptions = {
@@ -27,6 +28,8 @@ app.get("/", (req, res) => {
 app.all("*", (req, res, next) => {
   next(createError(404, { message: "Invalid URL" }));
 });
+
+app.use("/api/v1", router);
 
 // Client-side error handler
 app.use((err, req, res, next) => {
