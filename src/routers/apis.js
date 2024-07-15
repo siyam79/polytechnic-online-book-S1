@@ -4,7 +4,8 @@ const router = express.Router();
 // Import all routers
 const routers = [
     require("./BookRouter"), 
-    require("./PublisherRouter")
+    require("./PublisherRouter"),
+    require("./DepartmentRouter")
 ];
 
 // Dynamically apply routers
