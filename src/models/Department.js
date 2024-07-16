@@ -2,13 +2,12 @@ const mongoose = require("mongoose");
 
 const departmentSchema = new mongoose.Schema(
   {
-    name: {
+    department: {
       type: String,
       required: true,
     },
     description: {
       type: String,
-      required: true,
     },
   },
   { timestamps: true }
