@@ -7,6 +7,7 @@ const routers = [
   require("./PublisherRouter"),
   require("./DepartmentRouter"),
   require("./SemesterRouter"),
+  require("./UserRouter"),
 ];
 
 // Dynamically apply routers

@@ -11,7 +11,7 @@ const publisherRouter = express.Router();
 publisherRouter.get("/publishers", getAllPublishers);
 publisherRouter.get("/publishers/:id", getPublisherById);
 publisherRouter.post("/publishers", createPublisher);
-publisherRouter.put("/publishers/:id", updatePublisherById);
-publisherRouter.delete("/publishers/:id", deletePublisherById);
+publisherRouter.put("/publishers/u/:id", updatePublisherById);
+publisherRouter.delete("/publishers/d/:id", deletePublisherById);
 
 module.exports = publisherRouter;
