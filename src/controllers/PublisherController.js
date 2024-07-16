@@ -1,6 +1,5 @@
 const Publisher = require("../models/Publisher");
 
-// Get all publishers
 exports.getAllPublishers = async (req, res) => {
   try {
     const publishers = await Publisher.find();
@@ -10,7 +9,6 @@ exports.getAllPublishers = async (req, res) => {
   }
 };
 
-// Get a publisher by ID
 exports.getPublisherById = async (req, res) => {
   try {
     const publisher = await Publisher.findById(req.params.id);
@@ -22,7 +20,6 @@ exports.getPublisherById = async (req, res) => {
   }
 };
 
-// Create a new publisher
 exports.createPublisher = async (req, res) => {
   const { name, address, contact } = req.body;
   try {
@@ -38,7 +35,6 @@ exports.createPublisher = async (req, res) => {
   }
 };
 
-// Update a publisher by ID
 exports.updatePublisherById = async (req, res) => {
   try {
     const publisher = await Publisher.findByIdAndUpdate(
@@ -54,7 +50,6 @@ exports.updatePublisherById = async (req, res) => {
   }
 };
 
-// Delete a publisher by ID
 exports.deletePublisherById = async (req, res) => {
   try {
     const publisher = await Publisher.findByIdAndDelete(req.params.id);

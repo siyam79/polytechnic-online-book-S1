@@ -1,6 +1,5 @@
 const Semester = require("../models/Semester");
 
-// Get all semesters
 exports.getAllSemesters = async (req, res) => {
   try {
     const semesters = await Semester.find();
@@ -10,7 +9,6 @@ exports.getAllSemesters = async (req, res) => {
   }
 };
 
-// Get a semester by ID
 exports.getSemesterById = async (req, res) => {
   try {
     const semester = await Semester.findById(req.params.id);
@@ -22,7 +20,6 @@ exports.getSemesterById = async (req, res) => {
   }
 };
 
-// Create a new semester
 exports.createSemester = async (req, res) => {
   const { name, description, startDate, endDate } = req.body;
   try {
@@ -39,7 +36,6 @@ exports.createSemester = async (req, res) => {
   }
 };
 
-// Update a semester by ID
 exports.updateSemesterById = async (req, res) => {
   try {
     const semester = await Semester.findByIdAndUpdate(req.params.id, req.body, {
@@ -54,7 +50,6 @@ exports.updateSemesterById = async (req, res) => {
   }
 };
 
-// Delete a semester by ID
 exports.deleteSemesterById = async (req, res) => {
   try {
     const semester = await Semester.findByIdAndDelete(req.params.id);
