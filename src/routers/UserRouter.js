@@ -12,6 +12,6 @@ userRouter.post("/register", addUser);
 userRouter.post("/login", loginUser);
 userRouter.get("/users", getAllUsers);
 userRouter.get("/users/:email", getUserByEmail);
-userRouter.put("/update/u/:id", updateUserProfile);
+userRouter.put("/users/u/:id", updateUserProfile);
 
 module.exports = userRouter;
